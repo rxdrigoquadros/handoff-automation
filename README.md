@@ -115,6 +115,39 @@ Controls proposal-related elements and actions:
 - Status validation
 
 ## 🔧 Configuration
+- Install Appium
+```
+npm i --location=global appium
+```
+- Install the UiAutomator2 Driver
+```
+appium driver install uiautomator2
+```
+- Create your .env file
+- Create a Android emulator in the Android Studio
+- Get the emulator name with command
+```
+emulator -list-avds
+```
+- Set your emulator name and API version in the wdio.conf.js
+- Put APK in app folder
+```
+handoff-automation/
+├── app/
+  └── handoff.apk
+```
+- Run Appium in the terminal with command
+```
+appium
+```
+- Install project dependencies with command
+```
+npm i
+```
+- Run local tests with emulator using
+```
+npm run test
+```
 
 ### Environment Variables
 ```env

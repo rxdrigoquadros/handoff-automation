@@ -1,0 +1,69 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Testing
+test/reports/
+test/screenshots/
+test/logs/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production
+build/
+dist/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IDE - IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IDE - WebStorm
+.idea/
+.idea_modules/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Appium
+appium-logs/
+*.trace
+*.har
+
+# App binaries
+*.apk
+*.aab
+*.ipa
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage reports
+coverage/
+
+# Mochawesome
+mochawesome-report/
+mochawesome.json
+
+# Debug logs
+debug.log

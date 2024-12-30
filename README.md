@@ -133,7 +133,7 @@ emulator -list-avds
 - Put APK in app folder
 ```
 handoff-automation/
-├── app/
+└── app/
   └── handoff.apk
 ```
 - Run Appium in the terminal with command

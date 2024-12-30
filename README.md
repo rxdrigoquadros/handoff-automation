@@ -61,16 +61,53 @@ npm install
 cp .env.example .env
 # Edit .env with your credentials
 ```
+### Environment Variables
+```env
+PHONE_NUMBER=your_phone_number
+SMS_CODE=verification_code
+BASE_URL=app_base_url
+```
+
+## 🔧 Configuration
+- Install Appium
+```
+npm i --location=global appium
+```
+- Install the UiAutomator2 Driver
+```
+appium driver install uiautomator2
+```
+- Create your .env file
+- Create a Android emulator in the Android Studio
+- Get the emulator name with command
+```
+emulator -list-avds
+```
+- Set your emulator name and API version in the wdio.conf.js
+- Put APK in app folder
+```
+handoff-automation/
+└── app/
+  └── handoff.apk
+```
+- Run Appium in the terminal with command
+```
+appium
+```
+- Install project dependencies with command
+```
+npm i
+```
 
 ### Running Tests
 - Run all tests:
 ```bash
-npm test
+npm run test
 ```
 
 - Run specific test suite:
 ```bash
-npm test -- --spec ./test/specs/sendProposal.spec.js
+npx wdio run wdio.conf.js --spec ./test/specs/TESTNAME.spec.js  
 ```
 
 ## 📋 Test Suites
@@ -114,48 +151,6 @@ Controls proposal-related elements and actions:
 - Sending mechanisms
 - Status validation
 
-## 🔧 Configuration
-- Install Appium
-```
-npm i --location=global appium
-```
-- Install the UiAutomator2 Driver
-```
-appium driver install uiautomator2
-```
-- Create your .env file
-- Create a Android emulator in the Android Studio
-- Get the emulator name with command
-```
-emulator -list-avds
-```
-- Set your emulator name and API version in the wdio.conf.js
-- Put APK in app folder
-```
-handoff-automation/
-└── app/
-  └── handoff.apk
-```
-- Run Appium in the terminal with command
-```
-appium
-```
-- Install project dependencies with command
-```
-npm i
-```
-- Run local tests with emulator using
-```
-npm run test
-```
-
-### Environment Variables
-```env
-PHONE_NUMBER=your_phone_number
-SMS_CODE=verification_code
-BASE_URL=app_base_url
-```
-
 ### WebdriverIO Configuration
 Key configurations in `wdio.conf.js`:
 - Android capabilities
@@ -169,19 +164,3 @@ Test reports are generated automatically after each test run:
 - Pass/Fail statistics
 - Error screenshots
 - Execution time metrics
-
-## 🤝 Contributing
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## ✅ Best Practices
-- Use Page Object Model pattern
-- Maintain clear test descriptions
-- Implement proper error handling
-- Add appropriate validations
-- Keep tests independent
-- Use meaningful variable names
-- Document complex test scenarios
